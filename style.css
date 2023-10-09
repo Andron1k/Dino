@@ -1,0 +1,53 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial;
+}
+.score-display {
+    font-size: 50px;
+}
+
+.game-container {
+    position: relative;
+    width: 600px;
+    height: 600px;
+    border: 4px solid #000;
+    /* Можна додати анімацю gif на фон */
+}
+
+.ball {
+    position: absolute;
+    bottom: 0;
+    width: 60px;
+    height: 60px;
+    background-color: red;
+    border-radius: 50%;
+    /* Можна додати своє зображення замість мʼяча */
+
+}
+
+.obstacle {
+    position: absolute;
+    width: 100px;
+    height: 40px;
+    background-color: blue;
+    /* Можна додати своє зображення замість платформи */
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: moveObstacle 2s linear infinite;
+
+}
+
+@keyframes moveObstacle {
+    0% {
+        left: 100%; 
+    }
+    100% {
+        left: -200px; /* Кінцева позиція ліворуч від контейнера */
+    }
+}
+
